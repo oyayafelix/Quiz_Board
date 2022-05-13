@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: wheat;
+   
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 50vh;
+    
+}
+
+.quiz{
+    background-color: snow;
+    border-radius: 10px;
+    justify-content: center;
+}
+.question{
+    padding: 2rem;
+
+    
+}
+h2{
+    padding: 1rem;
+}
+
+ul{
+    list-style: none;
+}
+
+
