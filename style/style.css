@@ -13,27 +13,80 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    height: 50vh;
+    overflow: show;
+    height: 100%;
     
 }
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1C9BF0;
+    
+    
+}
+
 
 .quiz{
     background-color: snow;
     border-radius: 10px;
     justify-content: center;
+    padding: 1rem;
 }
-.question{
+.question1{
     padding: 2rem;
 
     
 }
 h2{
     padding: 1rem;
+    margin: 0;
+
 }
 
 ul{
     list-style: none;
+    padding: 0;
+}
+
+ul li{
+    font-size: 15px;
+    margin: 1rem ;
+}
+
+ul li label{
+    cursor: pointer;
+
+}
+
+button{
+    display: block;
+    color: white;
+    background-color: #1C9BF0;
+    border-radius: 5px;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover{
+    color:black;
+    background-color: aquamarine;
+    cursor: progress;
 }
 
 
+.question2{
+
+     padding: 2rem;
+    
+
+}
+.question3{
+
+    padding: 2rem;
+   
+
+}
