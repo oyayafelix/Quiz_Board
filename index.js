@@ -26,15 +26,16 @@ var myQuestions = [
         answers: {
             a: 'yes',
             b: 'no'
-        }
+        },
+        correctAnswer: 'a'
     }
 ];
- //declaring other variables //later
-var quizContainer = document.getElementById('quiz');
+//later -joining
+var quizContainer = document.getElementById('quiz'); 
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
-generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton); //later
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton); //later generating questions below
 
 //the main function
 
@@ -80,11 +81,38 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
     
 
 	function showResults(questions, quizContainer, resultsContainer){
-		// code will go here
-	}
+		
+        //collecting answers
+        var answerContainers=quizContainer.querySelectorAll('.answers');
 
-	// show the questions
+        //storing selected answers as user does the test
+        var userAnswer = '';
+        var numCorrect=0;
+
+        //for each quiz, find the selected answer
+        for(var i=0; i<questions.length; i++){
+            userAnswer= (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+        
+
+        //if answer is correct add to the total score(correct answers) and color correct answer blue
+        if(userAnswer=questions[i].correctAnswer){
+            numCorrect++;
+            answerContainers[i].style.color='blue';
+        }
+        //if answer is wrong add to the total score(wrong answers) and color correct answer red
+        else{
+            answerContainers[i].style.color='red';
+        }
+	}
+    // show number of correct answers out of total
+	resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+}
+    
+   
+	// show the questions-this will run the above function
 	showQuestions(questions, quizContainer);
+
+
 
 	// when user clicks submit, show results
 	submitButton.onclick = function(){
