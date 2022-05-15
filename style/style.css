@@ -1,12 +1,13 @@
 *{
     box-sizing: border-box;
+
 }
 body{
     background-color: wheat;
    
     align-items: center;
     justify-content: center;
-    padding: rem;
+    padding: 0rem 10rem;
     
     
     
