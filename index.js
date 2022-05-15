@@ -29,16 +29,18 @@ var myQuestions = [
         }
     }
 ];
- //declaring other variables
+ //declaring other variables //later
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
+
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton); //later
 
 //the main function
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
-    //showing questions and respective chioces
+    //showing quetions and respective chioces
 	function showQuestions(questions, quizContainer){
 		var output = [];
         var answers;
@@ -73,8 +75,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
         }
         //combining the obove two outputs
         quizContainer.innerHTML=output.join('');
+       
 	}
-
+    
 
 	function showResults(questions, quizContainer, resultsContainer){
 		// code will go here

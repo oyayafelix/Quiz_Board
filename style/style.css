@@ -27,38 +27,12 @@ h1{
     
 }
 
-
-.quiz{
-    background-color: snow;
-    border-radius: 10px;
-    justify-content: center;
-    padding: 1rem;
-}
-.question1{
-    padding: 2rem;
-
-    
-}
 h2{
     padding: 1rem;
     margin: 0;
 
 }
 
-ul{
-    list-style: none;
-    padding: 0;
-}
-
-ul li{
-    font-size: 15px;
-    margin: 1rem ;
-}
-
-ul li label{
-    cursor: pointer;
-
-}
 
 button{
     display: block;
@@ -75,18 +49,4 @@ button:hover{
     color:black;
     background-color: aquamarine;
     cursor: progress;
-}
-
-
-.question2{
-
-     padding: 2rem;
-    
-
-}
-.question3{
-
-    padding: 2rem;
-   
-
 }
