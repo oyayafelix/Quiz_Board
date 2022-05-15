@@ -25,11 +25,13 @@ var myQuestions = [
         question: "3. Is C++ a low level language?",
         answers: {
             a: 'yes',
-            b: 'no'
+            b: 'no',
+            c: 'not sure'
         },
         correctAnswer: 'a'
     }
 ];
+
 //later -joining
 var quizContainer = document.getElementById('quiz'); 
 var resultsContainer = document.getElementById('results');
@@ -106,7 +108,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 	}
     // show number of correct answers out of total
 	resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
-}
+    }
     
    
 	// show the questions-this will run the above function
